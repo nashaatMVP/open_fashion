@@ -1,0 +1,60 @@
+name: open_fashion
+description: "Open Fashion"
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.1.0
+  gap: ^3.0.1
+  ionicons: ^0.2.2
+  flutter_credit_card: ^4.1.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 21
+
+
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/cover/
+    - assets/logo/
+    - assets/product/
+    - assets/svgs/
+    - assets/texts/
+    - assets/pop/
+
+
+
+  fonts:
+    - family: "TenorSans"
+      fonts:
+        - asset: assets/fonts/Tenor_Sans/TenorSans-Regular.ttf
+
+
