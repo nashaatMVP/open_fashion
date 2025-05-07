@@ -35,21 +35,24 @@ class _AddCardState extends State<AddCard> {
             child: Column(
               children: [
                 Header(title: "Payment method"),
-                Gap(13),
+                Gap(0),
 
                 /// visa
                 CreditCardWidget(
+                  padding: 6,
                   cardNumber: cardNumber,
                   expiryDate: expiryDate,
                   cardHolderName: cardHolderName,
                   cvvCode: cvvCode,
                   showBackView: isShow,
                   onCreditCardWidgetChange: (v) {},
-                  cardBgColor: Colors.green.shade900,
+                  cardBgColor: Colors.red.shade900,
                   obscureCardCvv: false,
                   obscureCardNumber: true,
                   isHolderNameVisible: true,
                 ),
+
+                Gap(20),
 
                 /// form
                 CreditCardForm(
@@ -61,10 +64,52 @@ class _AddCardState extends State<AddCard> {
                   onCreditCardModelChange: onCreditCardModelChange,
                   isCardHolderNameUpperCase: true,
                   obscureCvv: false,
+                  inputConfiguration: InputConfiguration(
+                    cardNumberTextStyle: TextStyle(fontFamily: "TenorSans"),
+                    cardNumberDecoration: InputDecoration(
+                      hintText: "Card Number",
+                      hintStyle: TextStyle(fontFamily: "TenorSans"),
+                      counterStyle: TextStyle(color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+
+                      ),
+                    ),
+                    cardHolderTextStyle: TextStyle(fontFamily: "TenorSans"),
+                    cardHolderDecoration: InputDecoration(
+                      hintText: "Card Number",
+                      hintStyle: TextStyle(fontFamily: "TenorSans"),
+                      counterStyle: TextStyle(color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+
+                      ),
+                    ),
+                    cvvCodeTextStyle: TextStyle(fontFamily: "TenorSans"),
+                    cvvCodeDecoration: InputDecoration(
+                      hintText: "CVV",
+                      hintStyle: TextStyle(fontFamily: "TenorSans"),
+                      counterStyle: TextStyle(color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+
+                      ),
+                    ),
+                    expiryDateTextStyle: TextStyle(fontFamily: "TenorSans"),
+                    expiryDateDecoration: InputDecoration(
+                      hintText: "Expiry Date",
+                      hintStyle: TextStyle(fontFamily: "TenorSans"),
+                      counterStyle: TextStyle(color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+
+                      ),
+                    ),
+                  ),
                 ),
 
 
-                Gap(80),
+                Gap(100),
                 Button(
                     isSvgg: false,
                     title: "ADD CARD",

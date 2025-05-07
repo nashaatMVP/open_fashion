@@ -11,6 +11,8 @@ class AddressInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return GestureDetector(
       onTap: onTap,
       child: Row(
@@ -25,16 +27,22 @@ class AddressInfo extends StatelessWidget {
                 size: 20,
               ),
               Gap(15),
-              CustomText(
-                text: savedAddress['address'].toUpperCase(),
-                color: Colors.black54,
-                size: 16,
+              SizedBox(
+                width: size.width * 0.8,
+                child: CustomText(
+                  text: savedAddress['address'].toUpperCase(),
+                  color: Colors.black54,
+                  size: 16,
+                ),
               ),
               Gap(10),
-              CustomText(
-                text: savedAddress['city'].toUpperCase(),
-                color: Colors.black54,
-                size: 16,
+              SizedBox(
+                width: size.width * 0.7,
+                child: CustomText(
+                  text: savedAddress['city'].toUpperCase(),
+                  color: Colors.black54,
+                  size: 16,
+                ),
               ),
               Gap(10),
               CustomText(
@@ -46,9 +54,7 @@ class AddressInfo extends StatelessWidget {
               ),
             ],
           ),
-
           SvgPicture.asset("assets/svgs/arrow.svg"),
-
         ],
       ),
     );

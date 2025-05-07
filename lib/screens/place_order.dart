@@ -46,7 +46,6 @@ class _PlaceOrderState extends State<PlaceOrder> {
     super.initState();
   }
 
-
   /// address
   void _openAddress(context) async {
     final addressData = await Navigator.push(
@@ -105,6 +104,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
               _savedCard != null && _savedAddress != null ? SizedBox.shrink() : CustomText(
                 text: "Shipping address".toUpperCase(),
                 color: Colors.black38,
+                max: 2,
                 size: 16,
               ),
               Gap(13),
@@ -132,7 +132,6 @@ class _PlaceOrderState extends State<PlaceOrder> {
                   ],
                 ),
               ),
-              
               Gap(10),
               
               /// Shipping Method
@@ -144,7 +143,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                 color: Colors.black38,
                 size: 16,
               ),
-              
+
               Gap(20),
               _savedCard != null ? Column(
                 children: [
@@ -187,7 +186,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                   onChanged: (qty) => setState(() => selectedQty = qty),
               ) : SizedBox.shrink(),
 
-              Gap(200),
+              Gap(120),
 
               /// Ending
               Row(
