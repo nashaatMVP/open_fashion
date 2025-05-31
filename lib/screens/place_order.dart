@@ -186,7 +186,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                   onChanged: (qty) => setState(() => selectedQty = qty),
               ) : SizedBox.shrink(),
 
-              Gap(120),
+              Gap(80),
 
               /// Ending
               Row(

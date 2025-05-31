@@ -13,7 +13,6 @@ class CartWidget extends StatefulWidget {
     required this.price,
     required this.onChanged,
     required this.qty,
-
   });
   final String image, name, descp;
   final int price;

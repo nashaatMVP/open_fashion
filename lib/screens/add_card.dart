@@ -37,7 +37,7 @@ class _AddCardState extends State<AddCard> {
                 Header(title: "Payment method"),
                 Gap(0),
 
-                /// visa
+                /// visa card
                 CreditCardWidget(
                   padding: 6,
                   cardNumber: cardNumber,
@@ -46,7 +46,7 @@ class _AddCardState extends State<AddCard> {
                   cvvCode: cvvCode,
                   showBackView: isShow,
                   onCreditCardWidgetChange: (v) {},
-                  cardBgColor: Colors.red.shade900,
+                  cardBgColor: Color(0xff505664),
                   obscureCardCvv: false,
                   obscureCardNumber: true,
                   isHolderNameVisible: true,
